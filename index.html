@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caso de Estudio — Nexora Analytics | Portafolio Frontend</title>
+  <meta name="description"
+    content="Caso de estudio detallado sobre el rediseño y desarrollo frontend de Nexora Analytics. Solución, proceso y resultados de alto impacto.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- =========================================================
+       1. ENCABEZADO SUPERIOR (HEADER)
+       Barra superior de navegación con borde minimalista y controles
+       ========================================================= -->
+  <header class="site-header" id="mainHeader">
+    <div class="header-container">
+      <div class="header-brand">
+        <a href="#inicio" class="brand-logo" aria-label="Ir al inicio">
+          <span class="logo-symbol">✦</span>
+          <span class="logo-text">Portafolio<strong>.dev</strong></span>
+        </a>
+        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-current">Caso de Estudio</span>
+      </div>
+
+      <nav class="header-nav" aria-label="Navegación del caso de estudio">
+        <a href="#problematica" class="nav-link">Problemática y Objetivo</a>
+        <a href="#componentes" class="nav-link">Componentes</a>
+        <a href="#construccion" class="nav-link">Paso a Paso</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Selector de tema Claro / Oscuro -->
+        <button id="themeToggleBtn" class="action-btn theme-toggle" aria-label="Cambiar tema de color"
+          title="Alternar modo oscuro/claro">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="#demo" id="btnLiveDemo" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+          <span>Ver Demo</span>
+          <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       CONTENIDO PRINCIPAL
+       ========================================================= -->
+  <main class="page-wrapper" id="inicio">
+
+    <!-- 2. TÍTULO PRINCIPAL (CENTRADO EN LA PARTE SUPERIOR) -->
+    <header class="project-hero-header">
+      <div class="project-badge">
+        <span class="badge-dot"></span>
+        <span>CASO DE ESTUDIO • PRODUCT DESIGN & FRONTEND</span>
+      </div>
+
+      <h1 class="project-main-title" id="projectTitle">Nexora Analytics Platform</h1>
+
+      <p class="project-subtitle">
+        Rediseño integral de interfaz de usuario y arquitectura frontend para procesamiento de métricas críticas en
+        tiempo real.
+      </p>
+
+      <div class="project-meta-bar">
+        <div class="meta-item">
+          <span class="meta-label">Rol</span>
+          <span class="meta-value">Lead Frontend & UI Design</span>
+        </div>
+        <div class="meta-divider"></div>
+        <div class="meta-item">
+          <span class="meta-label">Año</span>
+          <span class="meta-value">2026</span>
+        </div>
+        <div class="meta-divider"></div>
+        <div class="meta-item">
+          <span class="meta-label">Stack</span>
+          <span class="meta-value">HTML5 / CSS3 / ES6 / WebSockets</span>
+        </div>
+        <div class="meta-divider"></div>
+        <div class="meta-item">
+          <span class="meta-label">Cliente</span>
+          <span class="meta-value">Nexora Technologies Corp.</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- =========================================================
+         3. DISTRIBUCIÓN EN 2 COLUMNAS (LAYOUT PRINCIPAL)
+         ========================================================= -->
+    <div class="case-study-layout">
+
+      <!-- COLUMNA IZQUIERDA (TEXTO: 3 SECCIONES VERTICALES) -->
+      <section class="case-study-text-column" aria-label="Detalles del proyecto">
+
+        <!-- SECCIÓN 1: Problemática y Objetivo -->
+        <article class="content-block" id="problematica">
+          <div class="block-header">
+            <span class="step-indicator">01</span>
+            <div class="header-titles">
+              <span class="block-eyebrow">Diagnóstico &amp; Metas</span>
+              <h2 class="block-title">Problemática y Objetivo</h2>
+            </div>
+          </div>
+
+          <div class="block-body">
+            <div class="subsection-item">
+              <h3 class="subsection-title">La Problemática</h3>
+              <p>
+                La plataforma legacy presentaba una severa sobrecarga cognitiva: tiempos de respuesta lentos (TTFB &gt;
+                3.2s),
+                dispersión en la visualización de gráficos críticos y una tasa de abandono del 38% en flujos analíticos.
+                Los usuarios reportaban dificultades para interpretar métricas en tiempo real bajo condiciones de alta
+                demanda.
+              </p>
+            </div>
+
+            <div class="subsection-item">
+              <h3 class="subsection-title">El Objetivo</h3>
+              <p>
+                Diseñar e implementar una interfaz moderna, limpia, intuitiva y 100% responsiva que redujera la fricción
+                operativa,
+                garantizara accesibilidad conforme a la norma WCAG 2.1 AA y redujera los tiempos de interacción en al
+                menos un 50%.
+              </p>
+            </div>
+
+            <ul class="highlight-checklist">
+              <li>
+                <span class="check-icon">✓</span>
+                <span><strong>Desafío:</strong> Eliminar cuellos de botella en renderizado de gráficos SVG
+                  masivos.</span>
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <span><strong>Meta:</strong> Estandarizar la identidad visual mediante un sistema de diseño
+                  atómico.</span>
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <span><strong>Adaptabilidad:</strong> Ofrecer experiencia táctil ergonómica y fluida en cualquier
+                  dispositivo.</span>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- SECCIÓN 2: Componentes -->
+        <article class="content-block" id="componentes">
+          <div class="block-header">
+            <span class="step-indicator">02</span>
+            <div class="header-titles">
+              <span class="block-eyebrow">Hardware, Sensores &amp; Circuito</span>
+              <h2 class="block-title">Componentes</h2>
+            </div>
+          </div>
+
+          <div class="block-body">
+            <p>
+              El sistema se compone de dos módulos interactivos interconectados: el <strong>módulo de procesamiento y
+                visualización integrado en la BBC micro:bit</strong>, y el <strong>circuito externo de interacción
+                montado en la placa de pruebas (protoboard)</strong>. Cada elemento cumple una función indispensable
+              dentro del dispositivo de comunicación:
+            </p>
+
+            <div class="components-feature-list">
+              <div class="feature-item">
+                <span class="feature-icon">❖</span>
+                <div>
+                  <strong>Placa BBC micro:bit:</strong> Microcontrolador principal del proyecto. Integra el procesador,
+                  los pines GPIO para conexión con la placa de pruebas y el sistema de alimentación.
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <span class="feature-icon">❖</span>
+                <div>
+                  <strong>Botones Integrados A y B (micro:bit):</strong> Pulsadores físicos de la propia micro:bit
+                  programados para solicitar necesidades básicas:
+                  <ul style="margin-top: 6px; padding-left: 18px; font-size: 0.9rem; line-height: 1.6;">
+                    <li><strong>Botón B:</strong> Al presionarlo, muestra en pantalla la palabra
+                      <strong>“comida”</strong>.
+                    </li>
+                    <li><strong>Botón A:</strong> Al presionarlo, muestra en pantalla la palabra
+                      <strong>“Beber”</strong>.
+                    </li>
+                    <li><strong>Botones A + B (a la vez):</strong> Al presionarlos simultáneamente, muestra la palabra
+                      <strong>“Dormir”</strong>.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <span class="feature-icon">❖</span>
+                <div>
+                  <strong>Pantalla Matriz LED (5×5):</strong> Pantalla formada por 25 LEDs integrados en el frontal de
+                  la micro:bit, encargada de proyectar en texto legible y en movimiento la palabra correspondiente a la
+                  necesidad solicitada.
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <span class="feature-icon">❖</span>
+                <div>
+                  <strong>Placa de Pruebas (Protoboard):</strong> Plataforma de conexionado rápido sin soldadura donde
+                  se ensambla el circuito auxiliar, conectada a la micro:bit para distribuir energía (3V), tierra (GND)
+                  y señales de control.
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <span class="feature-icon">❖</span>
+                <div>
+                  <strong>Botones Pulsadores Externos (x2 en Placa de Pruebas):</strong> Dos pulsadores conectados a la
+                  protoboard asignados a la manifestación de opinión o preferencia de la persona que lo usa (si le gusta
+                  o no algo).
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <span class="feature-icon">❖</span>
+                <div>
+                  <strong>Diodos LED Indicadores (Verde y Rojo):</strong> Diodos luminosos asociados a los botones de la
+                  placa de pruebas para proporcionar una respuesta visual clara e inmediata:
+                  <ul style="margin-top: 6px; padding-left: 18px; font-size: 0.9rem; line-height: 1.6;">
+                    <li><strong style="color: #10b981;">LED Verde:</strong> Se enciende al presionar el botón de agrado
+                      para señalar que a la persona <em>le gusta</em>.</li>
+                    <li><strong style="color: #ef4444;">LED Rojo:</strong> Se enciende al presionar el botón de
+                      desagrado para señalar que a la persona <em>no le gusta</em>.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <span class="feature-icon">❖</span>
+                <div>
+                  <strong>Resistencias y Cables de Conexión (Jumpers):</strong> Resistencias limitadoras conectadas en
+                  serie con los LEDs para regular la corriente y proteger los componentes, junto a cables jumpers que
+                  enlazan los pines digitales de la micro:bit con la protoboard.
+                </div>
+              </div>
+            </div>
+
+            <!-- Tabla de Mapeo de Funciones -->
+            <div class="interactive-mapping-box">
+              <h4 class="mapping-title">📋 Resumen de Asignación de Entradas y Salidas</h4>
+              <div class="mapping-table-wrapper">
+                <table class="custom-specs-table">
+                  <thead>
+                    <tr>
+                      <th>Control / Botón</th>
+                      <th>Ubicación</th>
+                      <th>Respuesta en la micro:bit / Circuito</th>
+                      <th>Significado / Función</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><span class="btn-chip">Botón B</span></td>
+                      <td>Frontal de la micro:bit</td>
+                      <td>Muestra la palabra <strong>“comida”</strong> en pantalla LED</td>
+                      <td>Necesidad de alimento</td>
+                    </tr>
+                    <tr>
+                      <td><span class="btn-chip">Botón A</span></td>
+                      <td>Frontal de la micro:bit</td>
+                      <td>Muestra la palabra <strong>“Beber”</strong> en pantalla LED</td>
+                      <td>Necesidad de hidratación</td>
+                    </tr>
+                    <tr>
+                      <td><span class="btn-chip">Botón A + B</span></td>
+                      <td>Simultáneo en micro:bit</td>
+                      <td>Muestra la palabra <strong>“Dormir”</strong> en pantalla LED</td>
+                      <td>Necesidad de descanso</td>
+                    </tr>
+                    <tr>
+                      <td><span class="btn-chip green-btn">Botón Externo 1</span></td>
+                      <td>Placa de pruebas</td>
+                      <td><span class="led-pill green-pill">● Enciende LED Verde</span></td>
+                      <td>A la persona <strong>le gusta</strong></td>
+                    </tr>
+                    <tr>
+                      <td><span class="btn-chip red-btn">Botón Externo 2</span></td>
+                      <td>Placa de pruebas</td>
+                      <td><span class="led-pill red-pill">● Enciende LED Rojo</span></td>
+                      <td>A la persona <strong>no le gusta</strong></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Tech Pills -->
+            <div class="tech-pills-wrapper">
+              <span class="tech-pill">BBC micro:bit</span>
+              <span class="tech-pill">Placa de Pruebas (Protoboard)</span>
+              <span class="tech-pill">Pantalla Matriz LED (5×5)</span>
+              <span class="tech-pill">Botones Integrados A y B</span>
+              <span class="tech-pill">Botones Pulsadores Externos</span>
+              <span class="tech-pill">LED Verde (Le gusta)</span>
+              <span class="tech-pill">LED Rojo (No le gusta)</span>
+              <span class="tech-pill">Resistencias &amp; Jumpers</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- SECCIÓN 3: Paso a Paso de Construcción -->
+        <article class="content-block" id="construccion">
+          <div class="block-header">
+            <span class="step-indicator">03</span>
+            <div class="header-titles">
+              <span class="block-eyebrow">Metodología &amp; Guía de Armado</span>
+              <h2 class="block-title">Paso a Paso de Construcción</h2>
+            </div>
+          </div>
+
+          <div class="block-body">
+            <p>
+              El proceso de construcción y puesta en marcha del proyecto se realizó de forma progresiva a través de las
+              siguientes 5 etapas de trabajo:
+            </p>
+
+            <!-- Línea de tiempo / Pasos de construcción -->
+            <div class="construction-steps-timeline">
+              <div class="step-card">
+                <div class="step-badge">Paso 1</div>
+                <div class="step-info">
+                  <h4 class="step-title">Definición de Requerimientos &amp; Asignación de Roles</h4>
+                  <p class="step-desc">
+                    Se planificó el sistema para que una persona pueda comunicarse fácilmente mediante dos canales: la
+                    pantalla de la micro:bit para requerimientos puntuales (comida, beber, dormir) y un panel
+                    complementario con LEDs para respuestas de agrado o rechazo (gusta / no gusta).
+                  </p>
+                </div>
+              </div>
+
+              <div class="step-card">
+                <div class="step-badge">Paso 2</div>
+                <div class="step-info">
+                  <h4 class="step-title">Montaje del Circuito en la Placa de Pruebas (Protoboard)</h4>
+                  <p class="step-desc">
+                    Se colocaron sobre la placa de pruebas los 2 botones externos junto con los 2 diodos LED (uno verde
+                    y uno rojo). Se insertaron resistencias limitadoras en serie conectadas a los cátodos/ánodos de cada
+                    LED para protegerlos contra sobretensiones y se conectó la línea de tierra común (GND).
+                  </p>
+                </div>
+              </div>
+
+              <div class="step-card">
+                <div class="step-badge">Paso 3</div>
+                <div class="step-info">
+                  <h4 class="step-title">Cableado e Interconexión con la BBC micro:bit</h4>
+                  <p class="step-desc">
+                    Mediante cables jumpers se interconectó la micro:bit con la protoboard: se enviaron líneas de
+                    alimentación y se asignaron pines digitales de entrada para sensar cuándo se presiona cada botón
+                    externo, así como pines digitales de salida para comandar el encendido del LED rojo y del LED verde.
+                  </p>
+                </div>
+              </div>
+
+              <div class="step-card">
+                <div class="step-badge">Paso 4</div>
+                <div class="step-info">
+                  <h4 class="step-title">Programación de la Lógica (Matriz LED &amp; Circuitos Externos)</h4>
+                  <p class="step-desc">
+                    Se implementó la programación en el entorno de la micro:bit:
+                    <br>• <strong>Botones propios:</strong> Al pulsar el botón <strong>B</strong> se ejecuta el comando
+                    para mostrar en pantalla la palabra <em>“comida”</em>; al presionar el botón <strong>A</strong> se
+                    proyecta <em>“Beber”</em>; y al presionar ambos botones al mismo tiempo (<strong>A+B</strong>) se
+                    muestra <em>“Dormir”</em>.
+                    <br>• <strong>Placa de pruebas:</strong> Al presionar el botón 1, el microcontrolador detecta la
+                    señal y enciende el <strong>LED Verde</strong> (indicando que a la persona le gusta); al pulsar el
+                    botón 2, se activa el <strong>LED Rojo</strong> (indicando que no le gusta).
+                  </p>
+                </div>
+              </div>
+
+              <div class="step-card">
+                <div class="step-badge">Paso 5</div>
+                <div class="step-info">
+                  <h4 class="step-title">Pruebas Funcionales &amp; Calibración del Sistema</h4>
+                  <p class="step-desc">
+                    Se verificó el correcto desplazamiento de los textos en la pantalla de la micro:bit sin cortes, y se
+                    calibró la sensibilidad de los pulsadores de la placa de pruebas para asegurar un encendido nítido y
+                    firme de los LEDs verde y rojo según la interacción del usuario.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="quote-box">
+              <p class="quote-text">
+                "El uso combinado de los botones propios de la micro:bit y el circuito en la placa de pruebas permite
+                una comunicación accesible, permitiendo expresar necesidades esenciales y preferencias de forma clara y
+                visual."
+              </p>
+              <span class="quote-author">— Resumen Técnico del Proyecto</span>
+            </div>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- COLUMNA DERECHA (VISUAL: CONTENEDOR PRINCIPAL + DOS FOTOS ABAJO A LA DERECHA) -->
+      <aside class="case-study-visual-column" aria-label="Previsualización visual del proyecto">
+        <div class="visual-sticky-wrapper">
+
+          <!-- 1. MOCKUP PRINCIPAL SUPERIOR -->
+          <div class="visual-card" id="mockupContainer">
+            <!-- Barra superior del mockup simulando una ventana de navegador -->
+            <div class="mockup-chrome-bar">
+              <div class="mockup-dots" aria-hidden="true">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="mockup-url-pill">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                <span>nexora.app/dashboard/overview</span>
+              </div>
+              <div class="mockup-controls">
+                <button id="btnZoomMockup" class="chrome-btn zoom-trigger-btn" data-img-src="assets/project-mockup.jpg"
+                  data-caption="Nexora Analytics — Mockup Principal de Aplicación" title="Ampliar imagen"
+                  aria-label="Ampliar imagen en pantalla completa">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <polyline points="9 21 3 21 3 15"></polyline>
+                    <line x1="21" y1="3" x2="14" y2="10"></line>
+                    <line x1="3" y1="21" x2="10" y2="14"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Contenedor de la Imagen / Placeholder interactivo -->
+            <figure class="mockup-image-frame zoom-trigger" data-img-src="assets/project-mockup.jpg"
+              data-caption="Nexora Analytics — Mockup Principal de Aplicación" title="Haz clic para ampliar">
+              <img id="projectImage" src="assets/project-mockup.jpg"
+                alt="Vista previa de la interfaz de Nexora Analytics en pantalla de escritorio" loading="lazy"
+                class="mockup-img">
+
+              <!-- Overlay con badges informativos -->
+              <div class="mockup-badge-overlay">
+                <span class="badge-tag">Mockup Principal</span>
+                <span class="badge-dimension">1440 × 900 px</span>
+              </div>
+            </figure>
+
+            <!-- Barra inferior de utilidad: Permite al usuario subir o reemplazar fácilmente su propia imagen -->
+            <div class="mockup-footer">
+              <div class="mockup-footer-info">
+                <span class="footer-title">Captura del Proyecto</span>
+                <span class="footer-sub">Mockup en alta resolución</span>
+              </div>
+
+              <div class="mockup-footer-actions">
+                <label for="imageUploadInput" class="btn btn-secondary-sm"
+                  title="Subir tu propia imagen para probarla en el mockup">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="17 8 12 3 7 8"></polyline>
+                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                  </svg>
+                  <span>Reemplazar</span>
+                </label>
+                <input type="file" id="imageUploadInput" accept="image/*" class="visually-hidden">
+
+                <button id="btnResetImage" class="btn btn-ghost-sm" title="Restaurar imagen por defecto">
+                  Restablecer
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. GALERÍA DE FOTOS COMPLEMENTARIAS HASTA OCUPAR LA PARTE DE ABAJO -->
+          <div class="gallery-section-header">
+            <div class="gallery-section-title-wrap">
+              <span class="gallery-section-eyebrow">Documentación Técnica Visual</span>
+              <h3 class="gallery-section-title">Galería de Módulos &amp; Entregables</h3>
+            </div>
+            <span class="gallery-count-badge">7 Vistas Técnicas</span>
+          </div>
+
+          <div class="mockup-gallery-grid" aria-label="Galería complementaria de imágenes del proyecto">
+
+            <!-- Foto 1: Componentes & UI Kit -->
+            <div class="gallery-card zoom-trigger" data-img-src="assets/components-ui.jpg"
+              data-caption="Librería de Componentes &amp; UI Kit — Sistema de Diseño Atómico"
+              title="Haz clic para ampliar">
+              <div class="gallery-card-header">
+                <span class="gallery-tag">01 • UI Kit</span>
+                <button class="gallery-zoom-icon zoom-trigger-btn" data-img-src="assets/components-ui.jpg"
+                  data-caption="Librería de Componentes &amp; UI Kit — Sistema de Diseño Atómico"
+                  aria-label="Ampliar imagen de componentes">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </button>
+              </div>
+              <div class="gallery-thumb-frame">
+                <img src="assets/components-ui.jpg" alt="Librería de componentes UI Kit de Nexora" loading="lazy"
+                  class="gallery-img">
+              </div>
+              <div class="gallery-card-footer">
+                <span class="gallery-card-title">Librería de Componentes</span>
+                <span class="gallery-card-sub">Sistema atómico y tokens</span>
+              </div>
+            </div>
+
+            <!-- Foto 2: Proceso de Construcción -->
+            <div class="gallery-card zoom-trigger" data-img-src="assets/construction-process.jpg"
+              data-caption="Proceso de Construcción — Wireframes y Desarrollo Frontend en Vivo"
+              title="Haz clic para ampliar">
+              <div class="gallery-card-header">
+                <span class="gallery-tag">02 • Construcción</span>
+                <button class="gallery-zoom-icon zoom-trigger-btn" data-img-src="assets/construction-process.jpg"
+                  data-caption="Proceso de Construcción — Wireframes y Desarrollo Frontend en Vivo"
+                  aria-label="Ampliar imagen de construcción">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </button>
+              </div>
+              <div class="gallery-thumb-frame">
+                <img src="assets/construction-process.jpg" alt="Proceso de construcción, wireframes y maquetación"
+                  loading="lazy" class="gallery-img">
+              </div>
+              <div class="gallery-card-footer">
+                <span class="gallery-card-title">Flujo de Construcción</span>
+                <span class="gallery-card-sub">Wireframes y código frontend</span>
+              </div>
+            </div>
+
+            <!-- Foto 3: Adaptabilidad Mobile & Tablet -->
+            <div class="gallery-card zoom-trigger" data-img-src="assets/mobile-responsive.jpg"
+              data-caption="Diseño Responsivo — Experiencia Táctil Ergonómica en Smartphone y Tablet"
+              title="Haz clic para ampliar">
+              <div class="gallery-card-header">
+                <span class="gallery-tag">03 • Mobile First</span>
+                <button class="gallery-zoom-icon zoom-trigger-btn" data-img-src="assets/mobile-responsive.jpg"
+                  data-caption="Diseño Responsivo — Experiencia Táctil Ergonómica en Smartphone y Tablet"
+                  aria-label="Ampliar imagen de versión responsive">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </button>
+              </div>
+              <div class="gallery-thumb-frame">
+                <img src="assets/mobile-responsive.jpg"
+                  alt="Vista adaptada de Nexora Analytics en dispositivos móviles y tablet" loading="lazy"
+                  class="gallery-img">
+              </div>
+              <div class="gallery-card-footer">
+                <span class="gallery-card-title">Adaptabilidad Responsive</span>
+                <span class="gallery-card-sub">Mobile-First y ergonomía táctil</span>
+              </div>
+            </div>
+
+            <!-- Foto 4: Dashboard Analítico Dark Mode -->
+            <div class="gallery-card zoom-trigger" data-img-src="assets/dark-mode-analytics.jpg"
+              data-caption="Modo Oscuro &amp; Telemetría — Monitoreo de Métricas Críticas en Tiempo Real"
+              title="Haz clic para ampliar">
+              <div class="gallery-card-header">
+                <span class="gallery-tag">04 • Modo Oscuro</span>
+                <button class="gallery-zoom-icon zoom-trigger-btn" data-img-src="assets/dark-mode-analytics.jpg"
+                  data-caption="Modo Oscuro &amp; Telemetría — Monitoreo de Métricas Críticas en Tiempo Real"
+                  aria-label="Ampliar imagen de modo oscuro">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </button>
+              </div>
+              <div class="gallery-thumb-frame">
+                <img src="assets/dark-mode-analytics.jpg"
+                  alt="Dashboard analítico de Nexora en modo oscuro de alta fidelidad" loading="lazy"
+                  class="gallery-img">
+              </div>
+              <div class="gallery-card-footer">
+                <span class="gallery-card-title">Dashboard Analítico Dark</span>
+                <span class="gallery-card-sub">Telemetría y gráficos interactivos</span>
+              </div>
+            </div>
+
+            <!-- Foto 5: Rendimiento Lighthouse 99/100 -->
+            <div class="gallery-card zoom-trigger" data-img-src="assets/performance-audit.jpg"
+              data-caption="Auditoría Lighthouse — Puntuación 99/100 y Core Web Vitals Optimizados"
+              title="Haz clic para ampliar">
+              <div class="gallery-card-header">
+                <span class="gallery-tag">05 • Rendimiento</span>
+                <button class="gallery-zoom-icon zoom-trigger-btn" data-img-src="assets/performance-audit.jpg"
+                  data-caption="Auditoría Lighthouse — Puntuación 99/100 y Core Web Vitals Optimizados"
+                  aria-label="Ampliar imagen de auditoría Lighthouse">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </button>
+              </div>
+              <div class="gallery-thumb-frame">
+                <img src="assets/performance-audit.jpg"
+                  alt="Reporte de auditoría Google Lighthouse con puntuaciones verdes sobresalientes" loading="lazy"
+                  class="gallery-img">
+              </div>
+              <div class="gallery-card-footer">
+                <span class="gallery-card-title">Auditoría Lighthouse 99/100</span>
+                <span class="gallery-card-sub">Core Web Vitals &amp; Carga ultrarrápida</span>
+              </div>
+            </div>
+
+            <!-- Foto 6: Arquitectura de Datos & WebSockets -->
+            <div class="gallery-card zoom-trigger" data-img-src="assets/data-architecture.jpg"
+              data-caption="Arquitectura Frontend — Flujo de Eventos WebSocket y Renderizado a 60 FPS"
+              title="Haz clic para ampliar">
+              <div class="gallery-card-header">
+                <span class="gallery-tag">06 • Arquitectura</span>
+                <button class="gallery-zoom-icon zoom-trigger-btn" data-img-src="assets/data-architecture.jpg"
+                  data-caption="Arquitectura Frontend — Flujo de Eventos WebSocket y Renderizado a 60 FPS"
+                  aria-label="Ampliar imagen de arquitectura frontend">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </button>
+              </div>
+              <div class="gallery-thumb-frame">
+                <img src="assets/data-architecture.jpg"
+                  alt="Diagrama de flujo de datos y arquitectura reactiva con WebSockets" loading="lazy"
+                  class="gallery-img">
+              </div>
+              <div class="gallery-card-footer">
+                <span class="gallery-card-title">Pipeline de Datos &amp; WebSockets</span>
+                <span class="gallery-card-sub">Telemetría y renderizado a 60 FPS</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- 3. FOTO DESTACADA INFERIOR: USABILIDAD, HEATMAPS & ACCESIBILIDAD (CIERRA LA PARTE DE ABAJO) -->
+          <div class="visual-featured-card zoom-trigger" data-img-src="assets/ux-testing-heatmap.jpg"
+            data-caption="Testing de Usabilidad &amp; Accesibilidad — Heatmaps de Interacción y Validación WCAG 2.1 AA"
+            title="Haz clic para ampliar">
+            <div class="featured-card-header">
+              <span class="featured-tag">
+                <span class="badge-dot"></span>
+                <span>07 • Usabilidad &amp; Accesibilidad</span>
+              </span>
+              <button class="gallery-zoom-icon zoom-trigger-btn" data-img-src="assets/ux-testing-heatmap.jpg"
+                data-caption="Testing de Usabilidad &amp; Accesibilidad — Heatmaps de Interacción y Validación WCAG 2.1 AA"
+                aria-label="Ampliar imagen de testing de usabilidad">
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+              </button>
+            </div>
+            <div class="featured-thumb-frame">
+              <img src="assets/ux-testing-heatmap.jpg"
+                alt="Testing de usabilidad con mapas de calor y verificador de accesibilidad WCAG" loading="lazy"
+                class="featured-img">
+            </div>
+            <div class="featured-card-body">
+              <div class="featured-card-titles">
+                <h4 class="featured-card-title">Auditoría de Usabilidad, Mapas de Calor &amp; WCAG 2.1 AA</h4>
+                <p class="featured-card-sub">
+                  Análisis térmico de interacción, contraste óptico AA/AAA y navegación por teclado validada en 120
+                  sesiones de usuario.
+                </p>
+              </div>
+              <div class="featured-badges-list">
+                <span class="featured-badge-pill"><strong>✓</strong> WCAG 2.1 AA</span>
+                <span class="featured-badge-pill"><strong>✓</strong> Heatmap Térmico</span>
+                <span class="featured-badge-pill"><strong>✓</strong> Sesiones Grabadas</span>
+                <span class="featured-badge-pill"><strong>✓</strong> Latencia &lt; 120ms</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. TARJETA RÁPIDA DE ESPECIFICACIONES TÉCNICAS VISUALES -->
+          <div class="specs-mini-card">
+            <div class="spec-col">
+              <span class="spec-label">Formato</span>
+              <span class="spec-data">Responsivo (16:9 / 4:3)</span>
+            </div>
+            <div class="spec-col">
+              <span class="spec-label">Accesibilidad</span>
+              <span class="spec-data">WCAG 2.1 AA Compliant</span>
+            </div>
+            <div class="spec-col">
+              <span class="spec-label">Rendimiento</span>
+              <span class="spec-data">99/100 Lighthouse</span>
+            </div>
+            <div class="spec-col">
+              <span class="spec-label">Dispositivos</span>
+              <span class="spec-data">Desktop, Tablet, Mobile</span>
+            </div>
+          </div>
+
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p class="footer-copy">
+        © 2026 Desarrollado con HTML5, CSS3 &amp; JS siguiendo la arquitectura visual del boceto.
+      </p>
+      <div class="footer-links">
+        <a href="#inicio" class="back-to-top-btn" id="btnBackToTop">
+          <span>Volver arriba</span>
+          <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M10 17a.75.75 0 01-.75-.75V5.612L5.29 9.77a.75.75 0 01-1.08-1.04l5.25-5.5a.75.75 0 011.08 0l5.25 5.5a.75.75 0 11-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0110 17z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       MODAL LIGHTBOX (ZOOM DE IMAGEN)
+       ========================================================= -->
+  <div id="imageLightboxModal" class="lightbox-modal" role="dialog" aria-modal="true"
+    aria-label="Visualizador de imagen completa" hidden>
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-content">
+      <button id="btnCloseLightbox" class="lightbox-close-btn" aria-label="Cerrar modal">
+        ✕
+      </button>
+      <img id="lightboxImg" src="assets/project-mockup.jpg" alt="Ampliación del mockup del proyecto">
+      <p class="lightbox-caption">Nexora Analytics — Mockup de alta resolución</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
