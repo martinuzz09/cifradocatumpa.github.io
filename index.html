@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caso de Estudio — Comunicador Asistivo micro:bit | Portafolio Dev</title>
+  <meta name="description"
+    content="Caso de estudio detallado sobre el diseño, prototipado y programación de un comunicador asistivo con BBC micro:bit abordando la problemática en FUSEDIM.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- =========================================================
+       1. ENCABEZADO SUPERIOR (HEADER)
+       ========================================================= -->
+  <header class="site-header" id="mainHeader">
+    <div class="header-container">
+      <div class="header-brand">
+        <a href="#inicio" class="brand-logo" aria-label="Ir al inicio">
+          <span class="logo-symbol">✦</span>
+          <span class="logo-text">Portafolio<strong>.dev</strong></span>
+        </a>
+        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-current">Comunicador FUSEDIM micro:bit</span>
+      </div>
+
+      <nav class="header-nav" aria-label="Navegación del caso de estudio">
+        <a href="#problematica" class="nav-link">Problemática &amp; Solución</a>
+        <a href="#componentes" class="nav-link">Componentes</a>
+        <a href="#construccion" class="nav-link">Instructivo Paso a Paso</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggleBtn" class="action-btn theme-toggle" aria-label="Cambiar tema de color"
+          title="Alternar modo oscuro/claro">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="#construccion" class="btn btn-primary">
+          <span>Ver Instructivo Completo (PDF)</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       CONTENIDO PRINCIPAL
+       ========================================================= -->
+  <main class="page-wrapper" id="inicio">
+
+    <!-- 2. TÍTULO PRINCIPAL (HERO) -->
+    <header class="project-hero-header">
+      <div class="project-badge">
+        <span class="badge-dot"></span>
+        <span>SALUD COMUNITARIA • TECNOLOGÍA ASISTIVA & EMBEDDED SYSTEMS</span>
+      </div>
+
+      <h1 class="project-main-title" id="projectTitle">Reloj Comunicador FUSEDIM micro:bit</h1>
+
+      <p class="project-subtitle">
+        Prototipo de comunicación asistida bimodal (matriz LED y panel luminoso) diseñado para fomentar la autonomía de
+        personas con discapacidad intelectual.
+      </p>
+
+      <div class="project-meta-bar">
+        <div class="meta-item">
+          <span class="meta-label">Área</span>
+          <span class="meta-value">Salud Comunitaria</span>
+        </div>
+        <div class="meta-divider"></div>
+        <div class="meta-item">
+          <span class="meta-label">Entidad</span>
+          <span class="meta-value">FUSEDIM</span>
+        </div>
+        <div class="meta-divider"></div>
+        <div class="meta-item">
+          <span class="meta-label">Hardware</span>
+          <span class="meta-value">BBC micro:bit v2 / Protoboard</span>
+        </div>
+        <div class="meta-divider"></div>
+        <div class="meta-item">
+          <span class="meta-label">Año</span>
+          <span class="meta-value">2026</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- =========================================================
+         3. LAYOUT DE 2 COLUMNAS (TEXTO & GALERÍA MOCKUP CONCEPTUAL)
+         ========================================================= -->
+    <div class="case-study-layout">
+
+      <!-- COLUMNA IZQUIERDA -->
+      <section class="case-study-text-column" aria-label="Detalles conceptuales del proyecto">
+
+        <!-- SECCIÓN 1: Problemática y Objetivo / Solución -->
+        <article class="content-block" id="problematica">
+          <div class="block-header">
+            <span class="step-indicator">01</span>
+            <div class="header-titles">
+              <span class="block-eyebrow">Diagnóstico &amp; Metas</span>
+              <h2 class="block-title">Problemática y Objetivo</h2>
+            </div>
+          </div>
+
+          <div class="block-body">
+            <div class="subsection-item">
+              <h3 class="subsection-title">La Problemática (Contexto FUSEDIM)</h3>
+              <p>
+                Tras indagar por muchas opciones a trabajar, nos quedamos con la opción de Salud Comunitaria,
+                específicamente el problema que fue abordado por el FUSEDIM. Las personas con limitaciones severas del
+                habla o movilidad reducida sufren barreras cotidianas para manifestar requerimientos inmediatos (comida,
+                bebida, descanso) o expresar opiniones simples (me gusta / no me gusta), afectando su autonomía y
+                desarrollo en un ambiente sano y de respeto.
+              </p>
+            </div>
+
+            <div class="subsection-item">
+              <h3 class="subsection-title">¿QUÉ SOLUCIÓN PODEMOS DAR?</h3>
+              <p>
+                Nuestra solución principal pensada fue usar a la <strong>micro:bit como un comunicador
+                  versátil</strong>, mediante distintos medios y formas, permitiendo expresar todas las necesidades
+                básicas y formas elementales de interacción. Para ello incluimos <strong>5
+                  respuestas/necesidades</strong> esenciales que pueden ser expresadas por la persona fácilmente:
+              </p>
+              <ul style="margin: 10px 0 16px 20px; color: var(--text-secondary); line-height: 1.8;">
+                <li>🛌 <strong>Quiero dormir:</strong> Activado mediante pulsación simultánea de los botones A + B.</li>
+                <li>🍲 <strong>Quiero comer:</strong> Activado mediante el Botón B de la micro:bit.</li>
+                <li>🥤 <strong>Quiero tomar algo (Beber):</strong> Activado mediante el Botón A de la micro:bit.</li>
+                <li>👍 <strong>Me gusta:</strong> Activado mediante el botón externo que enciende un LED Verde.</li>
+                <li>👎 <strong>No me gusta:</strong> Activado mediante el botón externo que enciende un LED Rojo.</li>
+              </ul>
+            </div>
+
+            <ul class="highlight-checklist">
+              <li>
+                <span class="check-icon">✓</span>
+                <span><strong>Interacción Directa:</strong> Textos legibles en matriz 5×5 para necesidades
+                  primarias.</span>
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <span><strong>Indicadores Visuales Bimodales:</strong> Matriz LED y LEDs Verde/Rojo para agrado y
+                  desacuerdo.</span>
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <span><strong>Inclusión Social:</strong> Fomenta la autonomía comunicativa en entornos de salud
+                  comunitaria.</span>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- SECCIÓN 2: Componentes -->
+        <article class="content-block" id="componentes">
+          <div class="block-header">
+            <span class="step-indicator">02</span>
+            <div class="header-titles">
+              <span class="block-eyebrow">Hardware, Sensores &amp; Circuito</span>
+              <h2 class="block-title">Componentes Utilizados</h2>
+            </div>
+          </div>
+
+          <div class="block-body">
+            <p>
+              El sistema se compone de dos módulos interactivos interconectados: el módulo de procesamiento central
+              integrado en la BBC micro:bit v2 y el circuito auxiliar de interacción montado en la placa de pruebas
+              (protoboard):
+            </p>
+
+            <div class="components-feature-list">
+              <div class="feature-item">
+                <span class="feature-icon">❖</span>
+                <div>
+                  <strong>Placa BBC micro:bit v2:</strong> Microcontrolador principal de procesamiento con matriz LED
+                  5x5 y botones integrados A y B.
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <span class="feature-icon">❖</span>
+                <div>
+                  <strong>Placa de Pruebas (Protoboard):</strong> Base de conexionado rápido sin soldadura para el
+                  circuito de respuesta auxiliar.
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <span class="feature-icon">❖</span>
+                <div>
+                  <strong>Botones Pulsadores Externos (x2):</strong> Interruptores mecánicos montados en la protoboard
+                  asignados a "Me gusta" y "No me gusta".
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <span class="feature-icon">❖</span>
+                <div>
+                  <strong>Diodos LED (Verde y Rojo):</strong> Diodos luminosos de 5mm para confirmación visual inmediata
+                  de agrado/rechazo.
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <span class="feature-icon">❖</span>
+                <div>
+                  <strong>Resistencias y Cables Jumpers:</strong> Resistencias limitadoras de 220Ω y cables jumpers para
+                  interconexión GPIO Macho-Macho y Macho-Hembra.
+                </div>
+              </div>
+            </div>
+
+            <!-- Tabla de Mapeo -->
+            <div class="interactive-mapping-box">
+              <h4 class="mapping-title">📋 Resumen de Asignación de Entradas, Salidas y Materiales</h4>
+              <div class="mapping-table-wrapper">
+                <table class="custom-specs-table">
+                  <thead>
+                    <tr>
+                      <th>Componente / Entrada</th>
+                      <th>Ubicación</th>
+                      <th>Respuesta Visual</th>
+                      <th>Mensaje Expresado</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><span class="btn-chip">Botón B</span></td>
+                      <td>Frontal micro:bit</td>
+                      <td>Muestra la palabra <strong>“comida”</strong></td>
+                      <td>Quiero comer</td>
+                    </tr>
+                    <tr>
+                      <td><span class="btn-chip">Botón A</span></td>
+                      <td>Frontal micro:bit</td>
+                      <td>Muestra la palabra <strong>“Beber”</strong></td>
+                      <td>Quiero tomar algo</td>
+                    </tr>
+                    <tr>
+                      <td><span class="btn-chip">Botón A + B</span></td>
+                      <td>Simultáneo</td>
+                      <td>Muestra la palabra <strong>“Dormir”</strong></td>
+                      <td>Quiero dormir</td>
+                    </tr>
+                    <tr>
+                      <td><span class="btn-chip green-btn">Pulsador 1</span></td>
+                      <td>Protoboard</td>
+                      <td><span class="led-pill green-pill">● Enciende LED Verde</span></td>
+                      <td>Me gusta</td>
+                    </tr>
+                    <tr>
+                      <td><span class="btn-chip red-btn">Pulsador 2</span></td>
+                      <td>Protoboard</td>
+                      <td><span class="led-pill red-pill">● Enciende LED Rojo</span></td>
+                      <td>No me gusta</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="tech-pills-wrapper">
+              <span class="tech-pill">BBC micro:bit v2</span>
+              <span class="tech-pill">Protoboard</span>
+              <span class="tech-pill">Pantalla Matriz LED (5×5)</span>
+              <span class="tech-pill">Botones Integrados</span>
+              <span class="tech-pill">LED Verde (Me gusta)</span>
+              <span class="tech-pill">LED Rojo (No me gusta)</span>
+              <span class="tech-pill">Resistencias &amp; Jumpers</span>
+            </div>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- COLUMNA DERECHA (GALERÍA MOCKUP CONCEPTUAL) -->
+      <aside class="case-study-visual-column" aria-label="Previsualización visual del prototipo conceptual">
+        <div class="visual-sticky-wrapper">
+
+          <!-- CARD PRINCIPAL MOCKUP CONCEPTUAL -->
+          <div class="visual-card" id="mockupContainer">
+            <div class="mockup-chrome-bar">
+              <div class="mockup-dots" aria-hidden="true">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="mockup-url-pill">
+                <span>fusedim.org/comunicador-concept</span>
+              </div>
+              <div class="mockup-controls">
+                <button id="btnZoomMockup" class="chrome-btn zoom-trigger-btn"
+                  data-img-src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?auto=format&fit=crop&w=1000&q=80"
+                  data-caption="Prototipo Principal — Placa BBC micro:bit en Funcionamiento" title="Ampliar imagen">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <polyline points="9 21 3 21 3 15"></polyline>
+                    <line x1="21" y1="3" x2="14" y2="10"></line>
+                    <line x1="3" y1="21" x2="10" y2="14"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <figure class="mockup-image-frame zoom-trigger"
+              data-img-src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?auto=format&fit=crop&w=1000&q=80"
+              data-caption="Prototipo Principal — Placa BBC micro:bit en Funcionamiento" title="Haz clic para ampliar">
+              <img id="projectImage"
+                src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?auto=format&fit=crop&w=1000&q=80"
+                alt="Prototipo de microcontrolador para comunicación asistiva" loading="lazy" class="mockup-img">
+
+              <div class="mockup-badge-overlay">
+                <span class="badge-tag">Módulo Principal</span>
+                <span class="badge-dimension">v2</span>
+              </div>
+            </figure>
+
+            <div class="mockup-footer">
+              <div class="mockup-footer-info">
+                <span class="footer-title">Vista General del Dispositivo</span>
+                <span class="footer-sub">Hardware de comunicación asistida FUSEDIM</span>
+              </div>
+              <div class="mockup-footer-actions">
+                <label for="imageUploadInput" class="btn btn-secondary-sm" title="Subir foto propia">
+                  <span>Reemplazar</span>
+                </label>
+                <input type="file" id="imageUploadInput" accept="image/*" class="visually-hidden">
+                <button id="btnResetImage" class="btn btn-ghost-sm">Restablecer</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ENCABEZADO DE GALERÍA -->
+          <div class="gallery-section-header">
+            <div class="gallery-section-title-wrap">
+              <span class="gallery-section-eyebrow">Documentación Técnica Visual</span>
+              <h3 class="gallery-section-title">Galería de Módulos &amp; Prototipado</h3>
+            </div>
+            <span class="gallery-count-badge">4 Vistas Técnicas</span>
+          </div>
+
+          <!-- MOCKUP GALLERY GRID (IMÁGENES ÚNICAS Y DIFERENTES) -->
+          <div class="mockup-gallery-grid">
+
+            <!-- Card 1: Protoboard y Componentes -->
+            <div class="gallery-card zoom-trigger"
+              data-img-src="https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=600&q=80"
+              data-caption="Montaje del circuito auxiliar y pulsadores en protoboard">
+              <div class="gallery-card-header">
+                <span class="gallery-tag">01 • Protoboard</span>
+                <span class="gallery-zoom-icon">🔍</span>
+              </div>
+              <div class="gallery-thumb-frame">
+                <img src="https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=600&q=80"
+                  alt="Circuito de protoboard con componentes electrónicos" loading="lazy" class="gallery-img">
+              </div>
+              <div class="gallery-card-footer">
+                <span class="gallery-card-title">Circuito de LEDs</span>
+                <span class="gallery-card-sub">Indicadores 'Me gusta' y 'No me gusta'</span>
+              </div>
+            </div>
+
+            <!-- Card 2: Interconexión GPIO -->
+            <div class="gallery-card zoom-trigger"
+              data-img-src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80"
+              data-caption="Conexión de pines GPIO mediante cables jumpers">
+              <div class="gallery-card-header">
+                <span class="gallery-tag">02 • Interconexión</span>
+                <span class="gallery-zoom-icon">🔍</span>
+              </div>
+              <div class="gallery-thumb-frame">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80"
+                  alt="Cables jumpers conectando la micro:bit" loading="lazy" class="gallery-img">
+              </div>
+              <div class="gallery-card-footer">
+                <span class="gallery-card-title">Pines GPIO</span>
+                <span class="gallery-card-sub">Distribución de alimentación y datos</span>
+              </div>
+            </div>
+
+            <!-- Card 3: Matriz LED Iluminada -->
+            <div class="gallery-card zoom-trigger"
+              data-img-src="https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=600&q=80"
+              data-caption="Visualización dinámica en la matriz LED 5x5">
+              <div class="gallery-card-header">
+                <span class="gallery-tag">03 • Matriz LED</span>
+                <span class="gallery-zoom-icon">🔍</span>
+              </div>
+              <div class="gallery-thumb-frame">
+                <img src="https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=600&q=80"
+                  alt="Pantalla matriz LED 5x5 proyectando texto" loading="lazy" class="gallery-img">
+              </div>
+              <div class="gallery-card-footer">
+                <span class="gallery-card-title">Matriz 5×5</span>
+                <span class="gallery-card-sub">Despliegue de 'comida', 'Beber', 'Dormir'</span>
+              </div>
+            </div>
+
+            <!-- Card 4: Entorno de Código -->
+            <div class="gallery-card zoom-trigger"
+              data-img-src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=600&q=80"
+              data-caption="Programación en MakeCode / Python de los eventos de entrada y salida">
+              <div class="gallery-card-header">
+                <span class="gallery-tag">04 • Código Fuente</span>
+                <span class="gallery-zoom-icon">🔍</span>
+              </div>
+              <div class="gallery-thumb-frame">
+                <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=600&q=80"
+                  alt="Código fuente de programación en pantalla" loading="lazy" class="gallery-img">
+              </div>
+              <div class="gallery-card-footer">
+                <span class="gallery-card-title">Lógica MakeCode</span>
+                <span class="gallery-card-sub">Lectura de botones y control de LEDs</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </aside>
+
+    </div> <!-- FIN DE .case-study-layout -->
+
+    <!-- =========================================================
+         4. INSTRUCTIVO DE CONSTRUCCIÓN PASO A PASO (A ANCHO COMPLETO / CON IMÁGENES ÚNICAS EN CADA PASO)
+         ========================================================= -->
+    <section class="instructivo-full-width-section" id="construccion">
+      <article class="content-block">
+        <div class="block-header">
+          <span class="step-indicator">03</span>
+          <div class="header-titles">
+            <span class="block-eyebrow">Guía &amp; Documentación</span>
+            <h2 class="block-title">Instructivo de Construcción Paso a Paso</h2>
+          </div>
+        </div>
+
+        <div class="block-body">
+
+          <!-- ÍNDICE DEL INSTRUCTIVO Y ENLACE DE DESCARGA ACCESIBLE -->
+          <div class="interactive-mapping-box" style="margin-bottom: 24px; background: var(--bg-surface-subtle);">
+            <div
+              style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 12px;">
+              <h4 class="mapping-title" style="margin-bottom: 0;">📌 Índice General del Instructivo</h4>
+
+              <a href="#instructivo-pdf" class="btn btn-primary" style="font-size: 0.8rem; padding: 6px 12px;"
+                title="Abrir instructivo accesible en formato PDF">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                <span>Ver Instructivo Completo (PDF)</span>
+              </a>
+            </div>
+
+            <ol style="padding-left: 20px; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+              <li>Paso 1: Análisis de Requerimientos en Salud Comunitaria (FUSEDIM)</li>
+              <li>Paso 2: Ensamblado del Circuito de Respuestas en Protoboard</li>
+              <li>Paso 3: Interconexión y Cableado GPIO con BBC micro:bit</li>
+              <li>Paso 4: Programación de la Lógica en MakeCode / Python</li>
+              <li>Paso 5: Pruebas Funcionales y Validación en Salud Comunitaria</li>
+            </ol>
+          </div>
+
+          <!-- PASOS DEL INSTRUCTIVO CON IMÁGENES ESPECÍFICAS Y ÚNICAS -->
+          <div class="construction-steps-timeline">
+
+            <!-- Paso 1 -->
+            <div class="step-card">
+              <div class="step-badge">Paso 1</div>
+              <div class="step-info">
+                <h4 class="step-title">Análisis de Requerimientos en Salud Comunitaria (FUSEDIM)</h4>
+                <div class="gallery-thumb-frame zoom-trigger"
+                  data-img-src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80"
+                  data-caption="Reunión y diseño de la interacción asistiva"
+                  style="margin-top: 10px; border-radius: 8px;">
+                  <img
+                    src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80"
+                    alt="Investigación y trabajo en salud comunitaria"
+                    style="width: 100%; height: auto; display: block;">
+                </div>
+                <p class="step-desc" style="margin-top: 10px;">Se definió la arquitectura del comunicador para cubrir
+                  las 5 expresiones básicas solicitadas (comida, beber, dormir, me gusta, no me gusta), asegurando una
+                  interfaz intuitiva y accesible.</p>
+              </div>
+            </div>
+
+            <!-- Paso 2 -->
+            <div class="step-card">
+              <div class="step-badge">Paso 2</div>
+              <div class="step-info">
+                <h4 class="step-title">Ensamblado del Circuito de Respuestas en Protoboard</h4>
+                <div class="gallery-thumb-frame zoom-trigger"
+                  data-img-src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
+                  data-caption="Armado del circuito con LEDs y resistencias"
+                  style="margin-top: 10px; border-radius: 8px;">
+                  <img
+                    src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
+                    alt="Proceso de armado del circuito en protoboard"
+                    style="width: 100%; height: auto; display: block;">
+                </div>
+                <p class="step-desc" style="margin-top: 10px;">Se colocaron los 2 botones pulsadores en la placa de
+                  pruebas junto a los diodos LED verde y rojo, insertando resistencias limitadoras de 220Ω en serie para
+                  proteger el circuito de sobretensiones.</p>
+              </div>
+            </div>
+
+            <!-- Paso 3 -->
+            <div class="step-card">
+              <div class="step-badge">Paso 3</div>
+              <div class="step-info">
+                <h4 class="step-title">Interconexión y Cableado GPIO con BBC micro:bit</h4>
+                <div class="gallery-thumb-frame zoom-trigger"
+                  data-img-src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80"
+                  data-caption="Detalle del cableado jumpers de conexión GPIO"
+                  style="margin-top: 10px; border-radius: 8px;">
+                  <img
+                    src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80"
+                    alt="Detalle de cableado e interconexión GPIO" style="width: 100%; height: auto; display: block;">
+                </div>
+                <p class="step-desc" style="margin-top: 10px;">Se conectaron los pines digitales de la micro:bit a la
+                  protoboard mediante cables jumpers Macho-Hembra, distribuyendo las líneas de tierra (GND) y
+                  alimentación (3V) hacia los componentes de interacción.</p>
+              </div>
+            </div>
+
+            <!-- Paso 4 -->
+            <div class="step-card">
+              <div class="step-badge">Paso 4</div>
+              <div class="step-info">
+                <h4 class="step-title">Programación de la Lógica en MakeCode / Python</h4>
+                <div class="gallery-thumb-frame zoom-trigger"
+                  data-img-src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80"
+                  data-caption="Programación MakeCode para el despliegue del texto 'BEBER' y control de entradas"
+                  style="margin-top: 10px; border-radius: 8px;">
+                  <img
+                    src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80"
+                    alt="Pantalla con código y proyección de datos" style="width: 100%; height: auto; display: block;">
+                </div>
+                <p class="step-desc" style="margin-top: 10px;">Se programó el despliegue de mensajes en movimiento en la
+                  matriz LED ("comida", "Beber", "Dormir") al presionar los botones A y B, y la activación de pines
+                  digitales para encender los LEDs verde y rojo con la botonera auxiliar.</p>
+              </div>
+            </div>
+
+            <!-- Paso 5 -->
+            <div class="step-card">
+              <div class="step-badge">Paso 5</div>
+              <div class="step-info">
+                <h4 class="step-title">Pruebas Funcionales y Validación en Salud Comunitaria</h4>
+                <div class="gallery-thumb-frame zoom-trigger"
+                  data-img-src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80"
+                  data-caption="Validación final del prototipo portable de comunicación asistida"
+                  style="margin-top: 10px; border-radius: 8px;">
+                  <img
+                    src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80"
+                    alt="Pruebas de uso del prototipo wearable" style="width: 100%; height: auto; display: block;">
+                </div>
+                <p class="step-desc" style="margin-top: 10px;">Se realizaron pruebas de campo verificando la velocidad
+                  de desplazamiento del texto y la visibilidad de los indicadores luminosos para garantizar una
+                  interacción fluida y autónoma por parte de las personas en FUSEDIM.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="quote-box" style="margin-top: 24px;">
+            <p class="quote-text">
+              "Este comunicador accesible responde directamente a la problemática de FUSEDIM, ofreciendo una solución
+              práctica y portable en el ámbito de la salud comunitaria."
+            </p>
+            <span class="quote-author">— Instructivo de Prototipado Asistivo</span>
+          </div>
+
+        </div>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p class="footer-copy">
+        © 2026 Caso de Estudio — Comunicador Asistivo en Salud Comunitaria / FUSEDIM.
+      </p>
+      <div class="footer-links">
+        <a href="#inicio" class="back-to-top-btn" id="btnBackToTop">
+          <span>Volver arriba</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL LIGHTBOX (ZOOM DE IMAGEN) -->
+  <div id="imageLightboxModal" class="lightbox-modal" role="dialog" aria-modal="true" hidden>
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-content">
+      <button id="btnCloseLightbox" class="lightbox-close-btn" aria-label="Cerrar modal">✕</button>
+      <img id="lightboxImg" src="" alt="Imagen ampliada del prototipo">
+      <p class="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
